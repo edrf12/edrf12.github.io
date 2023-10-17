@@ -31,7 +31,7 @@ function App() {
           <ProjectCard 
             title='Snake Game' 
             description={`Simple snake game built with React, Vite and shadcn/ui`}
-            projectLink='https://gh.edrf.tech/snake/Users/eduardo/Developer/snake/.github' 
+            projectLink='https://gh.edrf.tech/snake' 
             projectSource='https://github.com/edrf12/snake'
           />
         </div>

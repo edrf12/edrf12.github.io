@@ -11,6 +11,7 @@ export interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, projectLink, projectSource }) => {
+    console.log(projectLink)
     return (
         <Card className='w-[300px]'>
             <CardHeader>
@@ -18,8 +19,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, projectLi
                 <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardFooter className='flex gap-2 items-center justify-center'>
-                <Button variant='outline'><ArrowUpRight onClick={() => window.open(projectLink)} className='h-[1.2rem] w-[1.2rem] mr-2'/>Preview</Button>
-               <Button variant='default'><Github onClick={() => window.open(projectSource)} className='h-[1.2rem] w-[1.2rem] mr-2'/>Source</Button>
+                <Button variant='outline' onClick={() => window.open(projectLink, '_self')}><ArrowUpRight className='h-[1.2rem] w-[1.2rem] mr-2'/>Preview</Button>
+               <Button variant='default' onClick={() => window.open(projectSource, '_self')}><Github className='h-[1.2rem] w-[1.2rem] mr-2'/>Source</Button>
             </CardFooter>
         </Card>
     )
